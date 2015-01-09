@@ -11,6 +11,7 @@
     "symlink"
   ],
   "author": "lms <ralphtheninja@riseup.net>",
+  "homepage": "https://github.com/ralphtheninja/readlink",
   "license": "MIT",
   "devDependencies": {
     "tape": "^3.0.3"
