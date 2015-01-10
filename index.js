@@ -4,7 +4,7 @@ var async = require('async')
 
 function readlink(link, cb) {
   var result = '/'
-  if (link[0] !== '/') link = path.join(__dirname, link)
+  if (link[0] !== '/') link = path.join(process.cwd(), link)
   var sub_paths = link.split('/').splice(1)
   async.eachSeries(sub_paths, function (sub_path, next) {
     expandPath(path.join(result, sub_path), function (err, next_path) {
