@@ -1,10 +1,10 @@
 # readlink
 
-Expands symbolic links similar to `readlink(1)` with `-f` flag set, i.e. it will expand each sub path if there are nested symlinks.
+`fs.readlink` only handles paths to symbolic links and not paths that contain symbolic links. This module solves this use case. Similar to `readlink(1)` with `-f` flag.
 
 ## Usage
 
-Assuming `/tmp/foo` is a symlink pointing to the folder `/tmp/bar/baz` which in turn contains `file`. Then `readlink()` will expand `/tmp/foo/file` to the real path.
+Assuming `/tmp/foo` is a symbolic link pointing to the folder `/tmp/bar/baz` which in turn contains `file`. Then `readlink` expands `/tmp/foo/file` to the real path, e.g. `/tmp/bar/baz/file`.
 
 ```js
 var readlink = require('readlink')
