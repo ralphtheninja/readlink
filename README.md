@@ -16,5 +16,15 @@ readlink('/tmp/foo/file', function (err, path) {
 
 ```
 
+## API
+
+There are two methods. One async and one synchronous.
+
+### readlink(path, cb)
+
+### readlink.sync(path)
+
+Where `path` is a string and `cb` is a node style callback with `err` and `result`.
+
 ## License
 MIT
