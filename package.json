@@ -4,7 +4,7 @@
   "description": "expands fs.readlink() similar to readlink from GNU coreutils",
   "main": "index.js",
   "scripts": {
-    "test": "tape test.js"
+    "test": "tape test/*.js"
   },
   "keywords": [
     "readlink",
