@@ -1,15 +1,15 @@
-var fs = require('fs')
-var path = require('path')
-var async = require('async')
+const fs = require('fs')
+const path = require('path')
+const async = require('async')
 
-function readlink(link, cb) {
+function readlink (link, cb) {
   var result = '/'
   if (link[0] !== '/') link = path.join(process.cwd(), link)
-  var sub_paths = link.split('/').splice(1)
-  async.eachSeries(sub_paths, function (sub_path, next) {
-    expandPath(path.join(result, sub_path), function (err, next_path) {
+  const subPaths = link.split('/').splice(1)
+  async.eachSeries(subPaths, function (subPath, next) {
+    expandPath(path.join(result, subPath), function (err, nextPath) {
       if (err) return next(err)
-      result = path.resolve(result, next_path)
+      result = path.resolve(result, nextPath)
       next()
     })
   }, function (err) {
@@ -20,14 +20,14 @@ function readlink(link, cb) {
 readlink.sync = function (link) {
   var result = '/'
   if (link[0] !== '/') link = path.join(process.cwd(), link)
-  var sub_paths = link.split('/').splice(1)
-  sub_paths.forEach(function (sub_path) {
-    result = path.resolve(result, expandPathSync(path.join(result, sub_path)))
+  const subPaths = link.split('/').splice(1)
+  subPaths.forEach(function (subPath) {
+    result = path.resolve(result, expandPathSync(path.join(result, subPath)))
   })
   return result
 }
 
-function expandPath(path, cb) {
+function expandPath (path, cb) {
   fs.lstat(path, function (err, stat) {
     if (err) return cb(err)
     if (stat.isSymbolicLink()) {
@@ -37,7 +37,7 @@ function expandPath(path, cb) {
   })
 }
 
-function expandPathSync(path) {
+function expandPathSync (path) {
   if (fs.lstatSync(path).isSymbolicLink()) {
     return fs.readlinkSync(path)
   }
