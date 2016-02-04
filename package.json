@@ -1,6 +1,6 @@
 {
   "name": "readlink",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "expands fs.readlink() similar to readlink from GNU coreutils",
   "main": "index.js",
   "scripts": {
