@@ -18,11 +18,11 @@
   "license": "MIT",
   "devDependencies": {
     "nsp": "^2.2.0",
-    "standard": "^5.4.1",
-    "tape": "^3.0.3",
-    "tmp": "0.0.24"
+    "standard": "^10.0.3",
+    "tape": "^4.8.0",
+    "tmp": "0.0.33"
   },
   "dependencies": {
-    "async": "^0.9.0"
+    "async": "^2.5.0"
   }
 }
