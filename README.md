@@ -1,5 +1,7 @@
 # readlink
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ralphtheninja/readlink.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/ralphtheninja/readlink.svg)](https://travis-ci.org/ralphtheninja/readlink)
 
 `fs.readlink` only handles paths to symbolic links and not paths that contain symbolic links. This module solves this use case. Similar to `readlink(1)` with `-f` flag.
