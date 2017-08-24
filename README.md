@@ -1,8 +1,9 @@
 # readlink
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/ralphtheninja/readlink.svg)](https://greenkeeper.io/)
+> Expand nested symbolic links to real paths.
 
 [![Build Status](https://travis-ci.org/ralphtheninja/readlink.svg)](https://travis-ci.org/ralphtheninja/readlink)
+[![Greenkeeper badge](https://badges.greenkeeper.io/ralphtheninja/readlink.svg)](https://greenkeeper.io/)
 
 `fs.readlink` only handles paths to symbolic links and not paths that contain symbolic links. This module solves this use case. Similar to `readlink(1)` with `-f` flag.
 
@@ -29,4 +30,5 @@ There are two methods. One async and one synchronous.
 Where `path` is a string and `cb` is a node style callback with `err` and `result`.
 
 ## License
+
 MIT
