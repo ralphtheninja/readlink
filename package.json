@@ -17,7 +17,7 @@
   "homepage": "https://github.com/ralphtheninja/readlink",
   "license": "MIT",
   "devDependencies": {
-    "nsp": "^2.2.0",
+    "nsp": "^3.0.0",
     "standard": "^10.0.3",
     "tape": "^4.8.0",
     "tmp": "0.0.33"
