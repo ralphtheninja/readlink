@@ -2,8 +2,7 @@
 
 > Expand nested symbolic links to real paths.
 
-[![Build Status](https://travis-ci.org/ralphtheninja/readlink.svg)](https://travis-ci.org/ralphtheninja/readlink)
-[![Greenkeeper badge](https://badges.greenkeeper.io/ralphtheninja/readlink.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/ralphtheninja/readlink.svg?branch=master)](https://travis-ci.org/ralphtheninja/readlink)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 `fs.readlink` only handles paths to symbolic links and not paths that contain symbolic links. This module solves this use case. Similar to `readlink(1)` with `-f` flag.
