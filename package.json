@@ -4,7 +4,7 @@
   "description": "expands fs.readlink() similar to readlink from GNU coreutils",
   "main": "index.js",
   "scripts": {
-    "test": "npm run tape && npm run lint && nsp check",
+    "test": "npm run tape && npm run lint",
     "tape": "tape test/*.js",
     "lint": "standard",
     "audit": "nsp check"
@@ -17,7 +17,6 @@
   "homepage": "https://github.com/ralphtheninja/readlink",
   "license": "MIT",
   "devDependencies": {
-    "nsp": "^2.2.0",
     "standard": "^10.0.3",
     "tape": "^4.8.0",
     "tmp": "0.0.33"
