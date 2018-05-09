@@ -21,6 +21,9 @@
     "tape": "^4.8.0",
     "tmp": "0.0.33"
   },
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "dependencies": {
     "async": "^2.5.0"
   }
