@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const async = require('async')
+const async = require('neo-async')
 
 function readlink (link, cb) {
   var result = '/'
