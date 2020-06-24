@@ -15,7 +15,7 @@ Assuming `/tmp/foo` is a symbolic link pointing to the folder `/tmp/bar/baz` whi
 
 ```js
 const readlink = require('readlink')
-readlink('/tmp/foo/file', function (err, path) {
+readlink('/tmp/foo/file', (err, path) => {
   console.log(path) // /tmp/bar/baz/file
 })
 
@@ -25,8 +25,11 @@ readlink('/tmp/foo/file', function (err, path) {
 
 ### `readlink(path, cb)`
 
-Where `path` is a string and `cb` is a node style callback with `err` and `result`. There's also a `readlink.sync(path)` variant.
+Where `path` is a string and `cb` is a node style callback with `err` and `result`.
 
+### `readlink.sync(path)`
+
+Sync version.
 
 ## License
 
