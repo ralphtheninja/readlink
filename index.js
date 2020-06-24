@@ -3,32 +3,32 @@ const path = require('path')
 const async = require('async')
 
 function readlink (link, cb) {
-  var result = '/'
+  let result = '/'
   if (link[0] !== '/') link = path.join(process.cwd(), link)
   const subPaths = link.split('/').splice(1)
-  async.eachSeries(subPaths, function (subPath, next) {
-    expandPath(path.join(result, subPath), function (err, nextPath) {
+  async.eachSeries(subPaths, (subPath, next) => {
+    expandPath(path.join(result, subPath), (err, nextPath) => {
       if (err) return next(err)
       result = path.resolve(result, nextPath)
       next()
     })
-  }, function (err) {
+  }, err => {
     cb(err, result)
   })
 }
 
-readlink.sync = function (link) {
-  var result = '/'
+readlink.sync = link => {
+  let result = '/'
   if (link[0] !== '/') link = path.join(process.cwd(), link)
   const subPaths = link.split('/').splice(1)
-  subPaths.forEach(function (subPath) {
+  subPaths.forEach(subPath => {
     result = path.resolve(result, expandPathSync(path.join(result, subPath)))
   })
   return result
 }
 
 function expandPath (path, cb) {
-  fs.lstat(path, function (err, stat) {
+  fs.lstat(path, (err, stat) => {
     if (err) return cb(err)
     if (stat.isSymbolicLink()) {
       return fs.readlink(path, cb)
